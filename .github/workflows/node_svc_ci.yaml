@@ -19,6 +19,14 @@ jobs:
           cd node-svc
           make docker-build 
         env:
+          TAG: ${GITHUB_RUN_ID}
+        
+      - name: Push the Docker image
+        shell: bash
+        run: |
+          cd node-svc
+          make docker-push 
+        env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
           TAG: ${GITHUB_RUN_ID}
