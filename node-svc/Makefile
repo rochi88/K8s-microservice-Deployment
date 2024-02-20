@@ -1,4 +1,6 @@
-IMAGE_NAME:= node-svc
+REGISTRY_NAME:= mehedi02
+SERVICE_NAME:= node-svc
+IMAGE_NAME:= ${REGISTRY_NAME}/${SERVICE_NAME}
 TAG:= latest
 
 docker-login:
