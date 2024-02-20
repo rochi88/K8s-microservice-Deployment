@@ -40,6 +40,13 @@ jobs:
           terraform init
         working-directory: ./terraform
 
+      - name: Terraform Format
+        working-directory: ./terraform
+        run: |
+          cd env/dev
+          terraform fmt -recursive
+
+
       - name: Terraform Plan
         working-directory: ./terraform
         run: |
