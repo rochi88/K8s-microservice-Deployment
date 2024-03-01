@@ -1,5 +1,5 @@
 // Fetch and display products
-const baseURL = "http://localhost"
+const baseURL = "http://3.212.70.19"
 
 // Products
 const getProductsBtn = document.getElementById('getProducts');
